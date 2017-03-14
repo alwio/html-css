@@ -1,0 +1,121 @@
+/* 全局变量 */
+body{
+    background:url("images/body_bg_page.jpg") no-repeat;
+    background-color:#3e2816;
+    font-size:20px;
+    font-family:"Arial", "Microsoft YaHei";
+    color:#ddd;
+}
+ul,li{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:#000;
+}
+a:visited{
+    color:#000;
+}
+header,nav,section{
+    width:1060px;
+    margin:0 auto;
+}
+header{
+    margin-top:70px;
+    height:200px;
+    background:url("images/cover.JPG") no-repeat 0 0;
+}
+nav{
+    height:50px;
+    background-color:#fff;
+    margin-bottom:10px;
+	/* position:fixed;
+	left:0;
+	right:0;
+	z-index:30; */
+}
+nav>ul{
+    margin:0 auto;
+    width:750px;
+}
+nav>ul>li{
+    float:left;
+    width:150px;
+    height:48px;
+    line-height:50px;
+    text-align:center;
+    margin:0 50px;
+}
+#middle{
+    border-bottom:4px solid red;
+    font-weight:bold;
+}
+nav>ul>li:hover{
+    border-bottom:4px solid red;
+    font-weight:bold;
+}
+aside{
+    float:left;
+    width:280px;
+    background-color:#fff;
+    border-radius:3px;
+}
+aside>p{
+    text-align:center;
+}
+aside>ul{
+    margin:5px 5px;
+}
+aside>ul>li>b{
+    float:left;
+    width:20px;
+    height:20px;
+    background-color:red;
+    margin:15px 20px;
+}
+aside>ul>li>a>span{
+    font-weight:bold;
+}
+aside>ul>li{
+    height:50px;
+    border-bottom:1px solid #eee;
+    color:#000;
+    text-align:left;
+    line-height:50px;
+}
+aside>ul>li:hover{
+    background-color:#eee;
+}
+#photo-wall{
+    float:right;
+}
+#photo-wall>ul{
+    float:right;
+    width:245px;
+    margin-left:10px;
+}
+#photo-wall>ul>li{
+    background-color:#fff;
+    text-align:center;
+    margin-bottom:15px;
+    border:1px solid #333;
+    border-radius:5px;
+}
+#photo-wall>ul>li>img{
+    margin-top:10px;
+}
+#photo-wall>ul>li>p{
+    margin:5px 10px;
+	font-size:14px;
+    padding:0;
+    text-align:left;
+    text-indent:5px;
+    color:#000;
+}
+#photo-wall>ul>li:hover{
+    position:relative;
+    left:-3px;
+    top:-3px;
+}

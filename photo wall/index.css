@@ -1,0 +1,191 @@
+/* 全局变量设置 */
+*{
+	box-sizing:border-box;
+}
+header,nav,section{
+	margin:0 auto;
+	width:1060px;
+}
+body{
+	background:url("images/body_bg_page.jpg") no-repeat 0 0;
+	background-color:#3e2916;
+}
+/* 头部背景设置 */
+header{
+	height:200px;
+	background:url("images/cover.JPG") no-repeat 0 0;
+	margin-top:70px;
+}
+/* 导航栏参数设置 */
+nav{
+	height:50px;
+	background-color:#fff;
+	padding:0 154px;
+/* 	position:fixed;
+	left:0;
+	right:0;
+	z-index:30; */
+}
+body>nav>div{	
+	float:left;
+	width:150px;
+	height:52px;
+	line-height:50px;
+	font-size:20px;
+	font-family:"微软雅黑";
+	text-align:center;
+	margin:0 50px;
+}
+body>nav>div>a{
+	text-decoration:none;
+}
+body>nav>div>a:visited{
+	color:#000;
+}
+#middle{
+	font-weight:bold;
+	border-bottom:4px solid red;
+}
+body>nav>div:hover{
+	font-weight:bold;
+	border-bottom:4px solid red;
+}
+/* 页面主体部分 */
+section{
+	position:relative;
+}
+/* 左侧导航栏参数设置 */
+aside{
+	float:left;
+	width:280px;
+	border-radius:3px;
+	background-color:#fff;
+	margin-top:10px;
+	padding-top:5px;
+	position:fixed;
+}
+aside>div{
+	float:left;
+	width:270px;
+	height:45px;
+	margin:0 5px;
+	border-bottom:1px solid #F2F2F5;
+}
+div.c1{
+	background-color:#F2F2F5;
+}
+aside>div:hover{
+	background-color:#F2F2F5;
+}
+aside>div>a{
+	float:left;
+	text-decoration:none;
+	font-size:20px;
+	line-height:45px;
+	font-family:"幼圆";
+	margin:0 20px;
+}
+#link{
+	display:inline-block;
+	text-decoration:none;
+	font-size:20px;
+	font-family:"幼圆";
+	margin:20px 90px;
+}
+#link:visited{
+	color:#555;
+}
+aside>div>a>div{
+	float:left;
+	background-image:url("images/photo_icon.png");
+	background-repeat:no-repeat;
+}
+aside>div.c1>a>div{
+	width:17px;
+	height:19px;
+	margin-top:13px;
+	background-position:0 0;
+	margin-right:16px;
+}
+aside>div.c2>a>div{
+	width:16px;
+	height:19px;
+	margin-top:13px;
+	background-position:-20px 0;
+	margin-right:17px;
+}
+aside>div.c3>a>div{
+	width:23px;
+	height:19px;
+	margin-top:13px;
+	background-position:-40px 0;
+	margin-right:10px;
+}
+aside>div.c4>a>div{
+	width:18px;
+	height:19px;
+	margin-top:13px;
+	background-position:-70px 0;
+	margin-right:15px;
+}
+aside>div>a:visited{
+	color:#555;
+}
+/* 右侧照片墙参数设置 */
+section>div{
+	float:right;
+	background-color:#fff;
+	border-radius:5px;
+}
+section>div>img{
+	margin:10px 10px;
+}
+section>div>span{
+	font-size:14px;
+	margin:0 10px;
+}
+div.i1{
+	width:238px;
+	height:335px;
+	margin-top:10px;
+}
+div.i2{
+	width:238px;
+	height:208px;
+	margin:0 15px;
+	margin-top:10px;
+}
+div.i3{
+	width:238px;
+	height:208px;
+	margin-top:10px;
+}
+div.i4{
+	clear:right;
+	width:238px;
+	height:262px;
+	margin:15px 0;
+	
+}
+div.i5{
+	width:238px;
+	height:262px;
+	margin:0 15px;
+	margin-top:-112px;
+}
+div.i6{
+	width:238px;
+	height:334px;
+	margin-top:-112px;
+}
+div.i1:hover,div.i2:hover,div.i3:hover,div.i4:hover,div.i5:hover,div.i6:hover{
+	position:relative;
+	left:-3px;
+	top:-3px;
+}
+/* 下载按钮参数设置 */
+#download{
+	position:absolute;
+	right:-100px;
+	top:500px
+}
