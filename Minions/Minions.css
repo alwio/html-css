@@ -1,0 +1,410 @@
+/* 设置全局变量 */
+*{
+    box-sizing:border-box;
+}
+body{
+    padding:0;
+    margin:0;
+}
+
+/* 设置容器样式 */
+#box{
+    width:400px;
+    height:600px;
+    background-color:#F8F8F8;
+    margin:50px auto;
+    position:relative;
+}
+#box:before{
+    content:"";
+    display:table;
+}
+/* 设置头发样式 */
+#hair{
+    width:100%;
+    position:absolute;
+}
+#hair div.hair-one{
+    width:120px;
+    height:100px;
+    border-radius:50%;
+    border-top:8px solid #000;
+    transform-origin:right top;
+    transform:rotate(30deg);
+    position:absolute;
+    left:115px;
+    top:80px;
+    animation:sway 2000ms infinite;
+}
+@keyframes sway {
+    0%{transform:rotate(30deg);}
+    50%{transform:rotate(28deg);}
+    100%{transform:rotate(30deg);}
+}
+#hair div.hair-two{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border-top:6px solid #000;
+    transform:rotate(3deg);
+    position:absolute;
+    left:125px;
+    top:50px;
+}
+/* 设置躯干样式 */
+#body{
+    width:250px;
+    height:410px;
+    border:5px solid #000;
+    border-radius:120px;
+    background-color:#F9D946;
+    margin:60px auto 130px;
+    overflow:hidden;
+    position:relative;
+    z-index:10;
+}
+/* 设置眼睛样式 */
+div.eyes{
+    width:100px;
+    height:100px;
+    border:5px solid #000;
+    border-radius:50%;
+    background-color:#fff;
+    position:absolute;
+    top:55px;
+}
+div.eyes.eyes-left{
+    left:20px;
+}
+div.eyes.eyes-right{
+    right:20px;
+}
+div.eyes>div{
+    width:40px;
+    height:40px;
+    background-color:#000;
+    border-radius:50%;
+    position:absolute;
+    left:25px;
+    top:25px;
+    animation:move 5s linear infinite;
+}
+@keyframes move {
+    0%{left:25px;}
+    12.5%{left:8px;}
+    25%{left:8px;}
+    37.5%{left:25px;}
+    50%{left:25px;}
+    62.5%{left:42px;}
+    75%{left:42px;}
+    87.5%{left:25px;}
+    100%{left:25px;}
+}
+div.eyes>div>div{
+    width:20px;
+    height:20px;
+    background-color:#fff;
+    border-radius:50%;
+    position:absolute;
+}
+div.eyes.eyes-left>div>div{
+    left:17px;
+    top:6px;
+    animation:leftMove 5s linear infinite;
+}
+@keyframes leftMove {
+    0%{left:17px;top:6px;}
+    12.5%{left:2px;top:12px;}
+    25%{left:2px;top:12px;}
+    37.5%{left:17px;top:6px;}
+    50%{left:17px;top:6px;}
+    62.5%{left:19px;top:11px;}
+    75%{left:19px;top:11px;}
+    87.5%{left:17px;top:6px;}
+    100%{left:17px;top:6px;}
+}
+div.eyes.eyes-right>div>div{
+    left:16px;
+    top:4px;
+    animation:rightMove 5s linear infinite;
+}
+@keyframes rightMove {
+    0%{left:16px;top:4px;}
+    12.5%{left:2px;top:9px;}
+    25%{left:2px;top:9px;}
+    37.5%{left:16px;top:4px;}
+    50%{left:16px;top:4px;}
+    62.5%{left:19px;top:9px;}
+    75%{left:19px;top:9px;}
+    87.5%{left:16px;top:4px;}
+    100%{left:16px;top:4px;}
+}
+/* 设置嘴巴样式 */
+div.mouth{
+    width:60px;
+    height:40px;
+    border:5px solid #000;
+    border-top:none;
+    border-right:none;
+    overflow:hidden;
+    border-bottom-left-radius:20px;
+    background-color:#fff;
+    transform:rotate(-35deg);
+    position:absolute;
+    left:95px;
+    top:165px;
+    animation:close 5s 3s infinite;
+}
+@keyframes close {
+    0%{width:60px;height:40px;top:165px;}
+    10%{width:50px;height:30px;top:170px;}
+    20%{width:60px;height:40px;top:165px;}
+    100%{width:60px;height:40px;top:165px;}
+}
+div.mouth>div.mask{
+    width:100px;
+    height:50px;
+    border-bottom:5px solid #000;
+    background-color:#F9D946;
+    transform:rotate(30deg);
+    position:absolute;
+    left:-3px;
+    top:-20px;
+}
+/* 设置裤子样式 */
+div.pants{
+    width:100%;
+    height:110px;
+    border-top:5px solid #000;
+    background-color:#2074A0;
+    overflow:hidden;
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+
+/* 设置口袋样式 */
+div.pocket{
+    width:172px;
+    height:66px;
+    border:5px solid #000;
+    border-bottom:none;
+    background-color:#2074A0;
+    position:absolute;
+    left:34px;
+    bottom:105px;
+}
+/* 设置吊带样式 */
+div.camisole{
+    width:105px;
+    height:27px;
+    border:5px solid #000;
+    background-color:#2074A0;
+    position:absolute;
+    bottom:130px;
+}
+div.camisole>span{
+    display:inline-block;
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background-color:#000;
+    margin:4px;
+    float:right;
+}
+div.camisole.camisole-right>span{
+    float:left;
+}
+div.camisole.camisole-left{
+    left:-45px;
+    transform-origin:right center;
+    transform:rotate(45deg);
+}
+div.camisole.camisole-right{
+    right:-45px;
+    transform-origin:left center;
+    transform:rotate(-45deg);
+}
+/* 设置线条样式 */
+div.line-center{
+    width:6px;
+    height:45px;
+    border-radius:3px;
+    background-color:#000;
+    position:absolute;
+    left:0;
+    right:0;
+    margin:auto;
+    bottom:0;
+
+}
+div.line-pocket{
+    width:72px;
+    height:57px;
+    border:5px solid #000;
+    border-bottom-left-radius:23px;
+    border-bottom-right-radius:23px;
+    position:absolute;
+    left:0;
+    right:0;
+    margin:auto;
+    bottom:65px;
+}
+div.pants div.line{
+    width:80px;
+    height:80px;
+    border-bottom:5px solid #000;
+    border-radius:50%;
+    position:absolute;
+    bottom:70px;
+}
+div.pants div.pants-shadow{
+    width:100%;
+    height:8px;
+    background-color:#2074A0;
+    position:absolute;
+    left:0;
+    top:0;
+}
+div.pants div.line.line-left{
+    border-right:5px solid #000;
+    transform:rotate(30deg);
+    left:-40px;
+}
+div.pants div.line.line-right{
+    border-left:5px solid #000;
+    transform:rotate(-30deg);
+    right:-40px;
+}
+/* 设置眼镜样式 */
+div.glasses{
+    width:25px;
+    height:16px;
+    background-color:#000;
+    position:absolute;
+    top:166px;
+    z-index:15;
+}
+div.glasses.glasses-left{
+    transform:skew(15deg) rotate(8deg);
+    left:77px;
+}
+div.glasses.glasses-right{
+    transform:skew(-15deg) rotate(-8deg);
+    right:77px;
+}
+/* 设置胳膊样式 */
+#box div.arm{
+    width:80px;
+    height:80px;
+    background-color:#F9D946;
+    border:5px solid #000;
+    border-radius:20px;
+    padding:18px;
+    position:absolute;
+    top:270px;
+    z-index:1;
+}
+#box div.arm>div{
+    width:100%;
+    height:5px;
+    border-radius:2.5px;
+    background-color:#000;
+}
+#box div.arm.arm-left{
+    left:5px;
+    transform-origin:right top;
+    transform:rotate(-50deg);
+    animation:armLeft 800ms infinite;
+}
+#box div.arm.arm-right{
+    right:5px;
+    transform-origin:left top;
+    transform:rotate(50deg);
+    animation:armRight 800ms 400ms infinite;
+}
+/* 设置胳膊的动画效果 */
+@keyframes armLeft {
+    0%{transform:rotate(-50deg);}
+    30%{transform:rotate(-53deg);}
+    60%{transform:rotate(-50deg);}
+    100%{transform:rotate(-50deg);}
+}
+@keyframes armRight {
+    0%{transform:rotate(50deg);}
+    30%{transform:rotate(53deg);}
+    60%{transform:rotate(50deg);}
+    100%{transform:rotate(50deg);}
+}
+/* 设置双脚样式 */
+#box div.foot{
+    width:75px;
+    height:60px;
+    transform-origin:left top;
+    position:absolute;
+    bottom:80px;
+    z-index:1;
+}
+#box div.foot.foot-left{
+    transform-origin:right top;
+}
+#box div.foot>div:first-child{
+    width:35px;
+    height:25px;
+    background-color:#000;
+}
+#box div.foot.foot-left>div:first-child {
+    float:right;
+}
+#box div.foot>div:last-child{
+    width:75px;
+    height:35px;
+    background-color:#000;
+}
+#box div.foot.foot-right>div:last-child{
+    border-top-right-radius:20px;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:8px;
+}
+#box div.foot.foot-left>div:last-child{
+    clear:right;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:8px;
+}
+#box div.foot.foot-left{
+    left:122px;
+    animation:footLeft 800ms 400ms infinite;
+}
+#box div.foot.foot-right{
+    right:122px;
+    animation:footRight 800ms infinite;
+}
+/* 设置双脚的动画效果 */
+@keyframes footLeft {
+    0%{transform:rotateZ(0deg);}
+    30%{transform:rotateZ(8deg);}
+    60%{transform:rotateZ(0deg);}
+    100%{transform:rotateZ(0deg);}
+}
+@keyframes footRight {
+    0%{transform:rotateZ(0deg);}
+    30%{transform:rotateZ(-8deg);}
+    60%{transform:rotateZ(0deg);}
+    100%{transform:rotateZ(0deg);}
+}
+
+
+/* 设置阴影样式 */
+#box div.shadow{
+    width:206px;
+    height:6px;
+    border-radius:50%;
+    box-shadow:0 0 3px 2px #B0B0B0;
+    background-color:#B0B0B0;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:77px;
+    margin:0 auto;
+}
